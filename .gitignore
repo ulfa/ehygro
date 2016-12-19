@@ -2,3 +2,4 @@
 /c_src/*.o
 /erl_crash.dump
 /priv/dht_interface
+/.rebar
