@@ -8,7 +8,7 @@
          terminate/2, code_change/3]).
 
 start_link() ->
-    gen_server:start_link({local, ?MODULE}, ?MODULE, "priv/dht_interface", []).
+    gen_server:start_link({local, ?MODULE}, ?MODULE, filename:join(code:priv_dir(ehygro),"dht_interface"), []).
 
 init(ExtProg) ->
     process_flag(trap_exit, true),
